@@ -1,0 +1,24 @@
+.header {
+    background-color: #f5eaf1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 4px 8px 0px rgb(0 0 0 / 21%);
+}
+
+.header__h1__logo {
+    height: 100px;
+}
+
+.header__navbar__ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar__ul--li {
+    padding: 1rem;
+}
+
+.fa-shopping-cart {
+    padding-right: 4px;
+}

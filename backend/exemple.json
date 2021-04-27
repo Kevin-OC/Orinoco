@@ -1,0 +1,36 @@
+[{
+    "varnish": ["varnish_1", "varnish_2", "varnish_3"],
+    "_id": "606ec2a04c586f463ad2e040",
+    "name": "Skogsta",
+    "price": 28900,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "http://ab-p5-api.herokuapp.com/images/oak_1.jpg"
+}, {
+    "varnish": ["varnish_1", "varnish_2"],
+    "_id": "606ec3694c586f463ad2e041",
+    "name": "Lerhamn",
+    "price": 56900,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "http://ab-p5-api.herokuapp.com/images/oak_2.jpg"
+}, {
+    "varnish": ["varnish_1"],
+    "_id": "606ec3904c586f463ad2e042",
+    "name": "Melltorp",
+    "price": 45500,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "http://ab-p5-api.herokuapp.com/images/oak_3.jpg"
+}, {
+    "varnish": ["varnish_1", "varnish_2"],
+    "_id": "606ec3b64c586f463ad2e043",
+    "name": "Lisabo",
+    "price": 29500,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "http://ab-p5-api.herokuapp.com/images/oak_4.jpg"
+}, {
+    "varnish": ["varnish_1", "varnish_2"],
+    "_id": "606ec3dc4c586f463ad2e044",
+    "name": "Karljan",
+    "price": 9900,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "imageUrl": "http://ab-p5-api.herokuapp.com/images/oak_5.jpg"
+}]

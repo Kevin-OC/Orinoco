@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/produit.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/e9c0f4b86c.js" crossorigin="anonymous"></script>
+    <script src="js/produit.js" defer></script>
+    <title>Produit</title>
+</head>
+<body>
+<div id="container">
+
+<header class="header">
+    <h1 class="header__h1">
+        <a href="index.html"><img class="header__h1__logo" src="backend/images/logo.png" alt="logo Orinoco"></a>
+    </h1>
+    <nav class="header__navbar">
+        <ul class="header__navbar__ul">
+            <li class="header__navbar__ul--li"><a href="index.html">Accueil</a></li>
+            <li class="header__navbar__ul--li"><a href="panier.html"><i class="fas fa-shopping-cart"></i>Panier</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2 class="title">PRODUIT AU DÉTAIL</h2>
+    <article class="produit">
+        <img class="produit__img" src="" alt="meuble en chêne">
+        <div>
+            <h3 class="produit__name"></h3>
+            <p class="produit__description"></p>
+            <p>Prix à l'unité : <span class="produit__price"></span></p>
+            <form id="myForm" action="panier.html" method="POST">
+                <label for="varnish">Choisissez votre varnish</label>
+                <select name="varnish" id="varnish" class="produit__choice" form="myForm"></select>
+                <br>
+                <label for="inputNumber">Indiquez la quantité souhaitée :</label>
+                <input name="inputNumber" id="inputNumber" type="number" min="0" max="50" placeholder="0" onchange="totalPrice(value)">
+                <input id="submitBtn" type="submit" value="Commandez">
+            </form>
+            <p>Prix total : <span class="produit__total">0</span> €</p>         
+        </div>   
+    </article>
+</main>
+
+<footer class="footer">
+    <a class="footer__link" href="#">Orinoco &#169;</a>
+    <a class="footer__link" href="#">OpenClassrooms: Projet 5</a>
+    <a class="footer__link" href="#">Étudiant: Kevin Gautier</a>
+</footer>
+
+</div>    
+</body>
+</html>

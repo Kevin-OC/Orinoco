@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/panier.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/e9c0f4b86c.js" crossorigin="anonymous"></script>
+    <script src="js/panier.js" defer></script>
+    <title>Panier</title>
+</head>
+<body>
+<div id="container">
+<header class="header">
+    <h1 class="header__h1">
+        <a href="index.html"><img class="header__h1__logo" src="backend/images/logo.png" alt="logo Orinoco"></a>
+    </h1>
+    <nav class="header__navbar">
+        <ul class="header__navbar__ul">
+            <li class="header__navbar__ul--li"><a href="index.html">Accueil</a></li>
+            <li class="header__navbar__ul--li"><a href="panier.html"><i class="fas fa-shopping-cart"></i>Panier</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <div class="title"><h2>VOTRE PANIER <i class="fas fa-shopping-cart"></i></h2></div>
+
+    <div id="panier-vide">
+        <p>Votre panier est vide !</p>
+    </div>
+    
+    <div class="return">
+        <a href="index.html">Cliquez ici pour poursuivre vos achats</a>   
+    </div>
+    
+</main>
+
+<div>
+    <p class="info">*Remplissez ce formulaire ci-dessous afin de passer et recevoir votre commande</p>
+    <form id="myForm" name="myForm" accept-charset="utf-8">
+        <input type="text" id="firstName" name="firstName" placeholder="Prénom" required>
+        <input type="text" id="lastName" name="lastName" placeholder="Nom" required>
+        <input type="text" id="city" name="city" placeholder="Ville" required>
+        <input type="text" id="address" name="address" placeholder="Adresse" required>
+        <input type="email" id="email" name="email" placeholder="E-mail" required>
+        <input type="submit" value="Envoi de la commande">
+    </form>
+</div>
+
+<footer class="footer">
+    <a class="footer__link" href="#">Orinoco &#169;</a>
+    <a class="footer__link" href="#">OpenClassrooms: Projet 5</a>
+    <a class="footer__link" href="#">Étudiant: Kevin Gautier</a>
+</footer>
+</div>  
+</body>
+</html>
