@@ -109,6 +109,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
         }
     })
 
+    // Envoi fetch via la méthode POST de 'data'
     fetch('http://localhost:3000/api/furniture/order', {
         method: 'POST',
         headers: {
@@ -116,12 +117,17 @@ document.querySelector('form').addEventListener('submit', (e) => {
         },
         body: JSON.stringify(data),
     })
+    // Retour de l'envoi au server
     .then(response => response.json())
     .then(data => {
+        // On va mettre dans le localStorage 'data'
         localStorage.setItem('confirmation', JSON.stringify(data));
+        // Effaçons le panier vu que la commande est passée
         localStorage.removeItem('monPanier');
+        // Ouverture de la page de confirmation
         window.open("confirmation.html");
     })
+    // Au cas où il y aurait une erreur
     .catch((error) => {
         console.error(error);
     });
