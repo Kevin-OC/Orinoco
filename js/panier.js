@@ -95,6 +95,10 @@ document.querySelector('form').addEventListener('submit', (e) => {
         },
         products : []
     }
+
+    formValidation = () => {
+        alert("test");
+    }
     
     // Si le panier est vide on stop la commande
     if (!panier) {
@@ -125,7 +129,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
         // Effaçons le panier vu que la commande est passée
         localStorage.removeItem('monPanier');
         // Ouverture de la page de confirmation
-        window.open("confirmation.html");
+        location.replace("confirmation.html")
     })
     // Au cas où il y aurait une erreur
     .catch((error) => {
