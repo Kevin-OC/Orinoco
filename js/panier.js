@@ -141,7 +141,3 @@ document.querySelector('form').addEventListener('submit', (e) => {
         console.error(error);
     });
 })
-
-
-// du onclick au addEventListener
-// Plan de test
