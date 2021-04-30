@@ -38,7 +38,7 @@ function createTemplate() {
                     <p>Prix : <span class="articlePrice">${price * quantity}</span>€</p>
                 </div>
                 <div>
-                    <button onclick="deleteFunction(${i})">
+                    <button class="btn">
                         <i class="far fa-trash-alt"></i>
                     </button>
                 </div>
@@ -51,6 +51,7 @@ function createTemplate() {
     totalPrice();
 }
 
+// Calcul du prix total en parcourant les valeurs HTML
 function totalPrice() {
     let priceDiv = document.createElement('div');
     priceDiv.className = "priceDiv";
@@ -65,19 +66,21 @@ function totalPrice() {
 }
 
 // Enlever un article du panier
-deleteFunction = (i) => {
-    panier.splice(i, 1);
-    localStorage.setItem('monPanier', JSON.stringify(panier));
-    
-    // Si le panier est vide on clear le localStorage
-    if (panier.length < 1) {
-        localStorage.removeItem('monPanier');
-    }
+let deleteBtns = document.querySelectorAll('.btn');
+for (let i = 0; i < deleteBtns.length; i++) {
+        deleteBtns[i].addEventListener('click', () => {
+            panier.splice(i, 1);
+            localStorage.setItem('monPanier', JSON.stringify(panier));
+        
+            // Si le panier est vide on clear le localStorage
+            if (panier.length < 1) {
+                localStorage.removeItem('monPanier');
+            }
 
-    // Rafraîchissement de la page
-    window.location.reload();
-};
-
+            // Rafraîchissement de la page
+            window.location.reload();
+        })
+}
 
 // Event type submit
 document.querySelector('form').addEventListener('submit', (e) => {
@@ -96,8 +99,10 @@ document.querySelector('form').addEventListener('submit', (e) => {
         products : []
     }
 
-    formValidation = () => {
-        alert("test");
+    // Vérification sur le prénom
+    if(!/^[ a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ'`'\-]+$/.test(data.contact.firstName)) {
+        alert("Attention à bien remplir correctement le formulaire");
+        return
     }
     
     // Si le panier est vide on stop la commande
@@ -136,3 +141,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
         console.error(error);
     });
 })
+
+
+// du onclick au addEventListener
+// Plan de test

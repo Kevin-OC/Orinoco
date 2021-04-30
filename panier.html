@@ -46,8 +46,8 @@
         <input type="text" id="firstName" name="firstName" placeholder="Prénom" required>
         <input type="text" id="lastName" name="lastName" placeholder="Nom" required>
         <input type="text" id="city" name="city" placeholder="Ville" required>
-        <input type="text" id="address" name="address" placeholder="Adresse" required>
-        <input type="email" id="email" name="email" placeholder="E-mail" required>
+        <input type="text" id="address" name="address" placeholder="Code Postal" pattern="[0-9]{5}" title="Il faut une série de 5 chiffres" required>
+        <input type="email" id="email" name="email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
         <input type="submit" value="Envoi de la commande">
     </form>
 </div>

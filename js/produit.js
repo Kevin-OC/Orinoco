@@ -61,7 +61,7 @@ function addPanier(e) {
 
     // Vérification que la commande possède au moins un article sinon on sort de la fonction
     if (!commande.quantity > 0) {
-        alert("vous devez choisir au moins un article pour passe la commande !")
+        alert("vous devez choisir au moins un article pour passer la commande !")
         return;
     }
 

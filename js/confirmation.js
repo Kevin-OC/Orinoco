@@ -3,14 +3,11 @@ let data = JSON.parse(localStorage.getItem('confirmation'));
 
 // On va calculer le prix total du panier
 let totalPrice = 0;
-for(let i = 0; i < data.products.length; i++) {
-    totalPrice += data.products[i].price;
-}
 
 // Là on pourrait faire un forEach aussi (au cas où)
-/*data.products.forEach(elt => {
+data.products.forEach(elt => {
     totalPrice += elt.price;
-});*/
+});
 
 // Display sur le html du numéro de commande et du prix total des articles (prix divisé par 100)
 document.getElementById('orderId').innerHTML = data.orderId;
