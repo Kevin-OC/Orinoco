@@ -28,7 +28,7 @@ function getData() {
         nodeMainHTML.innerHTML += article;              // <- intégration au HTML
         }
     })
-    .catch((err) => {
+    .catch((err) => {                                  // <- au cas où ça se passe mal on affiche l'erreur en console
         alert(err);
     })
 }

@@ -99,15 +99,27 @@ document.querySelector('form').addEventListener('submit', (e) => {
         products : []
     }
 
-    // Vérification sur le prénom
-    if(!/^[ a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ'`'\-]+$/.test(data.contact.firstName)) {
-        alert("Attention à bien remplir correctement le formulaire");
-        return
-    }
-    
     // Si le panier est vide on stop la commande
     if (!panier) {
-        alert("la commande ne peut pas être passée car le panier est vide");
+            alert("la commande ne peut pas être passée car le panier est vide");
+            return
+    }
+
+    // Vérification sur le prénom
+    if(!/^[ a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ'`'\-]+$/.test(data.contact.firstName)) {
+        alert("Attention à bien remplir correctement votre prénom");
+        return
+    }
+
+    // Vérification sur le Nom
+    if(!/^[ a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ'`'\-]+$/.test(data.contact.lastName)) {
+        alert("Attention à bien remplir correctement votre nom");
+        return
+    }
+
+    // Vérification sur l'adresse (Ville) avec au moins 4 caractères
+    if(!/^[ a-zA-Zéèê\-]{5,20}/.test(data.contact.city)) {
+        alert("Attention à bien remplir correctement le champ ville entre 4 et 5 lettres");
         return
     }
 
