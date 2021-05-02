@@ -117,9 +117,9 @@ document.querySelector('form').addEventListener('submit', (e) => {
         return
     }
 
-    // Vérification sur l'adresse (Ville) avec au moins 5 caractères
+    // Vérification sur l'adresse (Ville) avec entre 5 et 20 lettres
     if(!/^[ a-zA-Zéèê\-]{5,20}/.test(data.contact.city)) {
-        alert("Attention à bien remplir correctement le champ");
+        alert("Attention à bien remplir correctement le champ ville (entre 5 et 20 lettres)");
         return
     }
 
